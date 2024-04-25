@@ -10,6 +10,7 @@ public class Raycast : MonoBehaviour
     Rigidbody2D rigid;
     [SerializeField] private LayerMask whatIsBottom;
     private Animator anim;
+    PlayerMove player;
 
     private bool canHit = true;
 
@@ -17,6 +18,7 @@ public class Raycast : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        player = GetComponent<PlayerMove>();
     }
     private void Update()
     {
